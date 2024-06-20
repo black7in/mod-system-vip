@@ -158,7 +158,7 @@ public:
         float distance = 20;
         float angle = player->GetOrientation() * M_PI / 180.0f;
 
-        Creature* pet = player->SummonCreature(90000, player->GetPositionX() + (distance * cos(angle)), player->GetPositionY() + (distance * sin(angle)), player->GetPositionZ(), player->GetOrientation(), TEMPSUMMON_TIMED_OR_DEAD_DESPAWN, 60000);
+        Creature* pet = player->SummonCreature(100000, player->GetPositionX() + (distance * cos(angle)), player->GetPositionY() + (distance * sin(angle)), player->GetPositionZ(), player->GetOrientation(), TEMPSUMMON_TIMED_OR_DEAD_DESPAWN, 60000);
         pet->GetMotionMaster()->MoveFollow(player, PET_FOLLOW_DIST + 2.0, PET_FOLLOW_ANGLE);
         pet->SetFaction(player->GetFaction());
         pet->SetLevel(player->GetLevel());
